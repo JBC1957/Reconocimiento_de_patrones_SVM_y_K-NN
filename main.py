@@ -1,9 +1,18 @@
+'''
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ '''
+
 # ==========================================
 # 1. Importar librerías
 # ==========================================
-
 import pandas as pd
-
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
@@ -31,7 +40,7 @@ print(df.columns)
 # IMPORTANTE: esta columna NO existe todavía en el CSV original.
 # Aparece después de aplicar pd.get_dummies sobre la columna 'gender'.
 # 'gender_Male' será 1 si el cliente es hombre y 0 en caso contrario.
-columna_objetivo = "gender_Male"    # si quieres otra, cámbiala aquí
+columna_objetivo =  'country_USA' # "gender_Male"    # si quieres otra, cámbiala aquí
 
 # Eliminamos cualquier fila que tenga algún valor perdido en cualquier columna.
 # Es una decisión sencilla (en vez de imputar valores) que garantiza
@@ -48,6 +57,7 @@ columnas_a_eliminar = [
     "last_name",
     "signup_date",
     "product_name",
+    'product_id',
     "order_id",
     "order_date",
     "review_id",
